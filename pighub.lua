@@ -8,25 +8,50 @@ local Window = Rayfield:CreateWindow({
        FolderName = nil, -- Create a custom folder for your hub/game
        FileName = "Pig Hub"
     },
-    Discord = {
-       Enabled = false,
-       Invite = "", -- The Discord invite code, do not include discord.gg/
-       RememberJoins = false -- Set this to false to make them join the discord every time they load it up
-    },
-    KeySystem = false, -- Set this to true to use our key system
-    KeySettings = {
-       Title = "Pig Hub",
-       Subtitle = "Key System",
-       Note = "",
-       FileName = "PigHubKey",
-       SaveKey = true,
-       GrabKeyFromSite = false, 
-       Key = ""
-    }
  })
  function Destory()
     Rayfield:Destroy()
  end
+ function minionstip()
+    Rayfield:Notify({
+        Title = "Make them follow a person",
+        Content = "/e follow <user>",
+        Duration = 6.5,
+        Image = 4483362458,
+     })
+    end
+ function chatcontrollertip()
+    Rayfield:Notify({
+        Title = "Usage",
+        Content = "/e chat <user>",
+        Duration = 6.5,
+        Image = 4483362458,
+     })
+    end
+    function minions()
+        Rayfield:Notify({
+            Title = "Required Hat(s):",
+            Content = "Red Roblox Cap, International Fedora Spain, Chestnut Bun, Lavender Updo, International Fedora USA, International Fedora Mexico, International Fedora Brazil, International Fedora United Kingdom, Pal Hair, Brown Hair",
+            Duration = 7,
+            Image = 4483362458,
+         })
+        end
+ function longsnake()
+    Rayfield:Notify({
+        Title = "Required Hat(s):",
+        Content = "Red Roblox Cap, Chestnut Bun, Lavender Updo, ROBLOX Girl Hair, Jade Necklace with Shell Pendant, Pal Hair, Brown Hair",
+        Duration = 7,
+        Image = 4483362458,
+     })
+    end
+function baller()
+    Rayfield:Notify({
+        Title = "Required Hat(s):",
+        Content = "Red Stickman Head (Baller)",
+        Duration = 6.5,
+        Image = 4483362458,
+     })
+    end
  local Tab = Window:CreateTab("FE Scripts", 4483362458) 
  local Button = Tab:CreateButton({
     Name = "FE Btools",
@@ -37,19 +62,22 @@ local Window = Rayfield:CreateWindow({
  local Button = Tab:CreateButton({
     Name = "FE Baller",
     Callback = function()
+        baller()
         loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Lowerrated/roblox-fe-baller-script/main/main"))()
     end,
  })
  local Button = Tab:CreateButton({
     Name = "FE Chat Controller",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/rouxhaver/scripts/main/FE%20chat%20for%20someone.Lua",true))()
         chatcontrollertip()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/rouxhaver/scripts/main/FE%20chat%20for%20someone.Lua",true))()
     end,
  })
  local Button = Tab:CreateButton({
     Name = "FE Minions",
     Callback = function()
+        minionstip()
+
         loadstring(game:HttpGet("https://raw.githubusercontent.com/rouxhaver/scripts/main/FE%20little%20people.Lua",true))()
     end,
  })
@@ -57,6 +85,13 @@ local Window = Rayfield:CreateWindow({
     Name = "FE Snake",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/rouxhaver/scripts/main/fe_snake%5Cworm.Lua",true))()
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "FE Long Snake",
+    Callback = function()
+        longsnake()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/rouxhaver/scripts/main/Fe%20Snake%20except%20loooong.Lua",true))()
     end,
  })
  local Tab = Window:CreateTab("FE Hubs", 4483362458) 
@@ -83,6 +118,13 @@ local Window = Rayfield:CreateWindow({
     Name = "Yeet GUI",
     Callback = function()
         loadstring(game:HttpGet("https://pastebin.com/raw/saMtiek2",true))()
+    end,
+ })
+ local Tab = Window:CreateTab("Other Scripts", 4483362458)
+ local Button = Tab:CreateButton({
+    Name = "Rizzer",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/mikhailramlal/Rizzer/main/main"))()
     end,
  })
  local Tab = Window:CreateTab("Misc", 4483362458)
