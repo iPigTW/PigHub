@@ -63,20 +63,20 @@ function baller()
  local Tab = Window:CreateTab("FE Scripts", 4483362458) 
  local Paragraph = Tab:CreateParagraph({Title = "I don't own these scripts", Content = "Feel free to dm iPig#9689 on discord to take it down"})
  local Button = Tab:CreateButton({
-    Name = "FE Btools",
+    Name = "FE Btools(R6)",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/rouxhaver/scripts/main/FE%20BTools(UPDATE1).lua",true))()
     end,
  })
  local Button = Tab:CreateButton({
-    Name = "FE Baller",
+    Name = "FE Baller(R6)",
     Callback = function()
         baller()
         loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Lowerrated/roblox-fe-baller-script/main/main"))()
     end,
  })
  local Button = Tab:CreateButton({
-    Name = "FE Chat Controller",
+    Name = "FE Chat Controller(R6)",
     Callback = function()
         chatcontrollertip()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/rouxhaver/scripts/main/FE%20chat%20for%20someone.Lua",true))()
@@ -89,7 +89,7 @@ function baller()
     end,
  })
  local Button = Tab:CreateButton({
-    Name = "FE Minions",
+    Name = "FE Minions(R6)",
     Callback = function()
         minionstip()
 
@@ -97,13 +97,13 @@ function baller()
     end,
  })
  local Button = Tab:CreateButton({
-    Name = "FE Snake",
+    Name = "FE Snake(R6)",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/rouxhaver/scripts/main/fe_snake%5Cworm.Lua",true))()
     end,
  })
  local Button = Tab:CreateButton({
-    Name = "FE Long Snake",
+    Name = "FE Long Snake(R6)",
     Callback = function()
         longsnake()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/rouxhaver/scripts/main/Fe%20Snake%20except%20loooong.Lua",true))()
@@ -126,7 +126,7 @@ function baller()
  local Tab = Window:CreateTab("GUIs", 4483362458)
  local Paragraph = Tab:CreateParagraph({Title = "I don't own these scripts", Content = "Feel free to dm iPig#9689 on discord to take it down"})
  local Button = Tab:CreateButton({
-    Name = "Fling GUI",
+    Name = "Fling GUI(R6)",
     Callback = function()
         loadstring(game:HttpGet('https://pastebin.com/raw/r97d7dS0', true))()
     end,
@@ -138,7 +138,7 @@ function baller()
     end,
  })
  local Button = Tab:CreateButton({
-    Name = "Yeet GUI",
+    Name = "Yeet GUI(R6)",
     Callback = function()
         loadstring(game:HttpGet("https://pastebin.com/raw/saMtiek2",true))()
     end,
