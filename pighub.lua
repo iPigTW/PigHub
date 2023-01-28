@@ -178,7 +178,7 @@ function baller()
     end,
  })
  local Misc = Window:CreateTab("Misc", 4483362458)
- local Destory = Tab:CreateButton({
+ local Destory = Misc:CreateButton({
     Name = "Destory GUI",
     Callback = function()
         Destory()
