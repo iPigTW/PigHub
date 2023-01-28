@@ -1,1 +1,94 @@
-local v0=loadstring(game:HttpGet("https://raw.githubusercontent.com/shlexware/Orion/main/source"))();local v1=v0:MakeWindow({Name="Key System",HidePremium=false,SaveConfig=true,ConfigFolder="Key",IntroEnabled=false});local v2=v1:MakeTab({Name="Key",Icon="rbxassetid://4483345998",PremiumOnly=false});_G.Key="0LiybZJ*b8iPe2o6RX#xBlD2!";_G.KeyInput="string";CopyKey=function()v0:MakeNotification({Name="Key Link is Copied Into Your Clipboard",Content="Paste the link into your browser to continue.",Image="rbxassetid://4483345998",Time=5});end;incorrectkey=function()v0:MakeNotification({Name="Incorrect Key!",Content="You entered the wrong key.",Image="rbxassetid://4483345998",Time=5});end;correctkey=function()v0:Destroy();v0:MakeNotification({Name="Correct Key!",Content="You entered the right key, welcome to Pig Hub.",Image="rbxassetid://4483345998",Time=5});end;makescripthub=function()local v4=loadstring(game:HttpGet("https://raw.githubusercontent.com/shlexware/Orion/main/source"))();local v5=v4:MakeWindow({Name="Pig Hub",HidePremium=false,SaveConfig=true,ConfigFolder="Pig Hub",IntroEnabled=true,IntroText="Pig Hub"});if (game.PlaceId==142823291) then local v6=v5:MakeTab({Name="MM2",Icon="rbxassetid://4483345998",PremiumOnly=false});v6:AddButton({Name="Eclipse Hub(Auto Farm)",Callback=function()loadstring(game:HttpGet("https://pastebin.com/raw/S202Efke",true))();end});elseif (game.PlaceId==8737602449) then local v7=v5:MakeTab({Name="Pls Donate",Icon="rbxassetid://4483345998",PremiumOnly=false});v7:AddButton({Name="Auto Farm",Callback=function()loadstring(game:HttpGet("https://raw.githubusercontent.com/CF-Trail/tzechco-PlsDonateAutofarmBackup/main/old.lua"))();end});elseif (game.PlaceId==2753915549) then local v8=v5:MakeTab({Name="Blox Fruits",Icon="rbxassetid://4483345998",PremiumOnly=false});v8:AddButton({Name="RipperHub",Callback=function()loadstring(game:HttpGet("https://raw.githubusercontent.com/xDestinyx/RipperHub/main/Loader.lua"))();end});elseif (game.PlaceId==6403373529) then local v9=v5:MakeTab({Name="Slap Battles",Icon="rbxassetid://4483345998",PremiumOnly=false});v9:AddButton({Name="Rogue Hub",Callback=function()loadstring(game:HttpGet("https://raw.githubusercontent.com/Kitzoon/Rogue-Hub/main/Main.lua",true))();end});elseif (game.PlaceId==286090429) then local v10=v5:MakeTab({Name="Arsenal",Icon="rbxassetid://4483345998",PremiumOnly=false});v10:AddButton({Name="Adminus",Callback=function()loadstring(game:HttpGet("https://scripts.luawl.com/15129/AdminusFreeVersion.lua"))();end});elseif (game.PlaceId==2788229376) then local v11=v5:MakeTab({Name="Da hood",Icon="rbxassetid://4483345998",PremiumOnly=false});v11:AddButton({Name="Zinc Hub",Callback=function()loadstring(game:HttpGet("https://raw.githubusercontent.com/Zinzs/luascripting/main/canyoutellitsadahoodscriptornot.lua"))();end});v11:AddButton({Name="Auto Farm",Callback=function()loadstring(game:HttpGet("https://raw.githubusercontent.com/spacexrandom/Lua/main/DaHood",true))();end});end end;v2:AddTextbox({Name="Enter Key",Default="",TextDisappear=true,Callback=function(v3)_G.KeyInput=v3;end});v2:AddButton({Name="Check Key",Callback=function()if (_G.KeyInput==_G.Key) then correctkey();makescripthub();else incorrectkey();end end});v2:AddButton({Name="Get Key",Callback=function()setclipboard("https://link-hub.net/201315/pig-hub-key");CopyKey();end});
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+local Window = Rayfield:CreateWindow({
+    Name = "Pig Hub",
+    LoadingTitle = "Pig Hub",
+    LoadingSubtitle = "by iPig",
+    ConfigurationSaving = {
+       Enabled = true,
+       FolderName = nil, -- Create a custom folder for your hub/game
+       FileName = "Pig Hub"
+    },
+    Discord = {
+       Enabled = false,
+       Invite = "", -- The Discord invite code, do not include discord.gg/
+       RememberJoins = false -- Set this to false to make them join the discord every time they load it up
+    },
+    KeySystem = false, -- Set this to true to use our key system
+    KeySettings = {
+       Title = "Pig Hub",
+       Subtitle = "Key System",
+       Note = "",
+       FileName = "PigHubKey",
+       SaveKey = true,
+       GrabKeyFromSite = false, 
+       Key = ""
+    }
+ })
+ function Destory()
+    Rayfield:Destroy()
+ end
+ local Tab = Window:CreateTab("FE Scripts", 4483362458) 
+ local Button = Tab:CreateButton({
+    Name = "FE Btools",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/rouxhaver/scripts/main/FE%20BTools(UPDATE1).lua",true))()
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "FE Baller",
+    Callback = function()
+        loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Lowerrated/roblox-fe-baller-script/main/main"))()
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "FE Chat Controller",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/rouxhaver/scripts/main/FE%20chat%20for%20someone.Lua",true))()
+        chatcontrollertip()
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "FE Minions",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/rouxhaver/scripts/main/FE%20little%20people.Lua",true))()
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "FE Snake",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/rouxhaver/scripts/main/fe_snake%5Cworm.Lua",true))()
+    end,
+ })
+ local Tab = Window:CreateTab("FE Hubs", 4483362458) 
+ local Button = Tab:CreateButton({
+    Name = "Pendulum Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Pendulum%20Hub%20V5.lua"))()
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "Hat Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/6tshcUd2"))()
+    end,
+ })
+ local Tab = Window:CreateTab("FE GUIs", 4483362458)
+ local Button = Tab:CreateButton({
+    Name = "Fling GUI",
+    Callback = function()
+        loadstring(game:HttpGet('https://pastebin.com/raw/r97d7dS0', true))()
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "Yeet GUI",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/saMtiek2",true))()
+    end,
+ })
+ local Tab = Window:CreateTab("Misc", 4483362458)
+ local Button = Tab:CreateButton({
+    Name = "Destory GUI",
+    Callback = function()
+        Destory()
+    end,
+ })
