@@ -10,7 +10,7 @@ local Window = Rayfield:CreateWindow({
     },
     Discord = {
         Enabled = true,
-        Invite = "FDTGFnTqCt", -- The Discord invite code, do not include discord.gg/
+        Invite = "UUZMrMeqXs", -- The Discord invite code, do not include discord.gg/
         RememberJoins = true -- Set this to false to make them join the discord every time they load it up
      },
  })
@@ -65,41 +65,64 @@ function baller()
         Image = 4483362458,
      })
     end
- local Tab = Window:CreateTab("FE Scripts", 4483362458) 
- local Paragraph = Tab:CreateParagraph({Title = "I don't own these scripts", Content = "Feel free to dm iPig#9689 on discord to take it down"})
- local Button = Tab:CreateButton({
+local Player = Window:CreateTab("Player", 4483362458) 
+local Walkspeed = Player:CreateSlider({
+    Name = "Walkspeed",
+    Range = {0, 1000},
+    Increment = 10,
+    Suffix = "",
+    CurrentValue = 10,
+    Flag = "Walkspeed", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Speed)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Speed
+    end,
+ })
+ local JumpPower = Player:CreateSlider({
+    Name = "JumpPower",
+    Range = {0, 1000},
+    Increment = 10,
+    Suffix = "",
+    CurrentValue = 10,
+    Flag = "Jumppower", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(JumpPower)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = JumpPower
+    end,
+ })
+ local FEScripts = Window:CreateTab("FE Scripts", 4483362458) 
+ local Paragraph1 = FEScripts:CreateParagraph({Title = "I don't own these scripts", Content = "Feel free to dm iPig#9689 on discord to take it down"})
+ local Btools = FEScripts:CreateButton({
     Name = "FE Btools(R6)",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/rouxhaver/scripts/main/FE%20BTools(UPDATE1).lua",true))()
     end,
  })
- local Button = Tab:CreateButton({
+ local Baller = FEScripts:CreateButton({
     Name = "FE Baller(R6)",
     Callback = function()
         baller()
         loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Lowerrated/roblox-fe-baller-script/main/main"))()
     end,
  })
- local Button = Tab:CreateButton({
+ local chatcontroller = FEScripts:CreateButton({
     Name = "FE Chat Controller(R6)",
     Callback = function()
         chatcontrollertip()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/rouxhaver/scripts/main/FE%20chat%20for%20someone.Lua",true))()
     end,
  })
- local Button = Tab:CreateButton({
+ local collision = FEScripts:CreateButton({
     Name = "FE Collision Enabler",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/rouxhaver/scripts/main/Local%20Full%20Player%20Collision.Lua",true))()
     end,
  })
- local Button = Tab:CreateButton({
+ local eathats = FEScripts:CreateButton({
     Name = "FE Eat your hats(R6)",
     Callback = function()
         loadstring(game:HttpGet("https://pastebin.com/raw/4btSqDT8",true))()
     end,
  })
- local Button = Tab:CreateButton({
+ local Minions = FEScripts:CreateButton({
     Name = "FE Minions(R6)",
     Callback = function()
         minionstip()
@@ -107,56 +130,56 @@ function baller()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/rouxhaver/scripts/main/FE%20little%20people.Lua",true))()
     end,
  })
- local Button = Tab:CreateButton({
+ local Snake = FEScripts:CreateButton({
     Name = "FE Snake(R6)",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/rouxhaver/scripts/main/fe_snake%5Cworm.Lua",true))()
     end,
  })
- local Button = Tab:CreateButton({
+ local longsnake = FEScripts:CreateButton({
     Name = "FE Long Snake(R6)",
     Callback = function()
         longsnake()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/rouxhaver/scripts/main/Fe%20Snake%20except%20loooong.Lua",true))()
     end,
  })
- local Tab = Window:CreateTab("FE Hubs", 4483362458) 
- local Paragraph = Tab:CreateParagraph({Title = "I don't own these scripts", Content = "Feel free to dm iPig#9689 on discord to take it down"})
- local Button = Tab:CreateButton({
+ local Hubs = Window:CreateTab("FE Hubs", 4483362458) 
+ local Paragraph2 = Hubs:CreateParagraph({Title = "I don't own these scripts", Content = "Feel free to dm iPig#9689 on discord to take it down"})
+ local Pendulum = Hubs:CreateButton({
     Name = "Pendulum Hub",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Pendulum%20Hub%20V5.lua"))()
     end,
  })
- local Button = Tab:CreateButton({
+ local Hathub = Hubs:CreateButton({
     Name = "Hat Hub",
     Callback = function()
         loadstring(game:HttpGet("https://pastebin.com/raw/6tshcUd2"))()
     end,
  })
- local Tab = Window:CreateTab("GUIs", 4483362458)
- local Paragraph = Tab:CreateParagraph({Title = "I don't own these scripts", Content = "Feel free to dm iPig#9689 on discord to take it down"})
- local Button = Tab:CreateButton({
+ local gui = Window:CreateTab("GUIs", 4483362458)
+ local Paragraph3 = gui:CreateParagraph({Title = "I don't own these scripts", Content = "Feel free to dm iPig#9689 on discord to take it down"})
+ local FlingGUI = gui:CreateButton({
     Name = "Fling GUI(R6)",
     Callback = function()
         loadstring(game:HttpGet('https://pastebin.com/raw/r97d7dS0', true))()
     end,
  })
- local Button = Tab:CreateButton({
+ local Rizzer = gui:CreateButton({
     Name = "Rizzer",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/mikhailramlal/Rizzer/main/main"))()
     end,
  })
- local Button = Tab:CreateButton({
+ local YeetGui = gui:CreateButton({
     Name = "Yeet GUI(R6)",
     Callback = function()
         loadstring(game:HttpGet("https://pastebin.com/raw/saMtiek2",true))()
     end,
  })
- local Tab = Window:CreateTab("Other Scripts", 4483362458)
- local Paragraph = Tab:CreateParagraph({Title = "I don't own these scripts", Content = "Feel free to dm iPig#9689 on discord to take it down"})
- local Button = Tab:CreateButton({
+ local Other = Window:CreateTab("Other Scripts", 4483362458)
+ local Paragraph4 = Other:CreateParagraph({Title = "I don't own these scripts", Content = "Feel free to dm iPig#9689 on discord to take it down"})
+ local Bypasser = Other:CreateButton({
     Name = "Better Bypasser",
     Callback = function()
         bypassertip()
@@ -165,20 +188,20 @@ function baller()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/synnyyy/synergy/additional/betterbypasser",true))()
     end,
  })
- local Button = Tab:CreateButton({
+ local Dex = Other:CreateButton({
     Name = "Lazy Dex",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/Lazy_Dex.lua",true))()
     end,
  })
- local Button = Tab:CreateButton({
+ local IY = Other:CreateButton({
     Name = "Infinite Yield",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source",true))()
     end,
  })
- local Tab = Window:CreateTab("Misc", 4483362458)
- local Button = Tab:CreateButton({
+ local Misc = Window:CreateTab("Misc", 4483362458)
+ local Destory = Tab:CreateButton({
     Name = "Destory GUI",
     Callback = function()
         Destory()
