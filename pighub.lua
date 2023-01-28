@@ -122,9 +122,21 @@ function baller()
  })
  local Tab = Window:CreateTab("Other Scripts", 4483362458)
  local Button = Tab:CreateButton({
+    Name = "Lazy Dex",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/Lazy_Dex.lua",true))()
+    end,
+ })
+ local Button = Tab:CreateButton({
     Name = "Rizzer",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/mikhailramlal/Rizzer/main/main"))()
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "Infinite Yield",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source",true))()
     end,
  })
  local Tab = Window:CreateTab("Misc", 4483362458)
