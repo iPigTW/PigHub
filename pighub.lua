@@ -12,6 +12,14 @@ local Window = Rayfield:CreateWindow({
  function Destory()
     Rayfield:Destroy()
  end
+ function bypassertip()
+    Rayfield:Notify({
+        Title = "Press Q to Enable Bypasser",
+        Content = ":)",
+        Duration = 6.5,
+        Image = 4483362458,
+     })
+    end
  function minionstip()
     Rayfield:Notify({
         Title = "Make them follow a person",
@@ -53,6 +61,7 @@ function baller()
      })
     end
  local Tab = Window:CreateTab("FE Scripts", 4483362458) 
+ local Paragraph = Tab:CreateParagraph({Title = "I don't own these scripts", Content = "Feel free to dm iPig#9689 on discord to take it down"})
  local Button = Tab:CreateButton({
     Name = "FE Btools",
     Callback = function()
@@ -71,6 +80,12 @@ function baller()
     Callback = function()
         chatcontrollertip()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/rouxhaver/scripts/main/FE%20chat%20for%20someone.Lua",true))()
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "FE Collision Enabler",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/rouxhaver/scripts/main/Local%20Full%20Player%20Collision.Lua",true))()
     end,
  })
  local Button = Tab:CreateButton({
@@ -95,6 +110,7 @@ function baller()
     end,
  })
  local Tab = Window:CreateTab("FE Hubs", 4483362458) 
+ local Paragraph = Tab:CreateParagraph({Title = "I don't own these scripts", Content = "Feel free to dm iPig#9689 on discord to take it down"})
  local Button = Tab:CreateButton({
     Name = "Pendulum Hub",
     Callback = function()
@@ -107,11 +123,18 @@ function baller()
         loadstring(game:HttpGet("https://pastebin.com/raw/6tshcUd2"))()
     end,
  })
- local Tab = Window:CreateTab("FE GUIs", 4483362458)
+ local Tab = Window:CreateTab("GUIs", 4483362458)
+ local Paragraph = Tab:CreateParagraph({Title = "I don't own these scripts", Content = "Feel free to dm iPig#9689 on discord to take it down"})
  local Button = Tab:CreateButton({
     Name = "Fling GUI",
     Callback = function()
         loadstring(game:HttpGet('https://pastebin.com/raw/r97d7dS0', true))()
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "Rizzer",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/mikhailramlal/Rizzer/main/main"))()
     end,
  })
  local Button = Tab:CreateButton({
@@ -121,16 +144,20 @@ function baller()
     end,
  })
  local Tab = Window:CreateTab("Other Scripts", 4483362458)
+ local Paragraph = Tab:CreateParagraph({Title = "I don't own these scripts", Content = "Feel free to dm iPig#9689 on discord to take it down"})
+ local Button = Tab:CreateButton({
+    Name = "Better Bypasser",
+    Callback = function()
+        bypassertip()
+        _G.Keybind = 'Q' -- This is usually defaulted to Q. However, you can change to whatever you want.
+        _G.Method = 1 -- 1 for the new method, 2 for the emoji method. If not defined, it will be defaulted to 1.
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/synnyyy/synergy/additional/betterbypasser",true))()
+    end,
+ })
  local Button = Tab:CreateButton({
     Name = "Lazy Dex",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/Lazy_Dex.lua",true))()
-    end,
- })
- local Button = Tab:CreateButton({
-    Name = "Rizzer",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/mikhailramlal/Rizzer/main/main"))()
     end,
  })
  local Button = Tab:CreateButton({
