@@ -8,6 +8,11 @@ local Window = Rayfield:CreateWindow({
        FolderName = nil, -- Create a custom folder for your hub/game
        FileName = "Pig Hub"
     },
+    Discord = {
+        Enabled = true,
+        Invite = "FDTGFnTqCt", -- The Discord invite code, do not include discord.gg/
+        RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+     },
  })
  function Destory()
     Rayfield:Destroy()
