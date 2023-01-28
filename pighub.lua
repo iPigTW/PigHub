@@ -65,29 +65,6 @@ function baller()
         Image = 4483362458,
      })
     end
-local Player = Window:CreateTab("Player", 4483362458) 
-local Walkspeed = Player:CreateSlider({
-    Name = "Walkspeed",
-    Range = {0, 1000},
-    Increment = 10,
-    Suffix = "",
-    CurrentValue = 10,
-    Flag = "Walkspeed", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-    Callback = function(Speed)
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Speed
-    end,
- })
- local JumpPower = Player:CreateSlider({
-    Name = "JumpPower",
-    Range = {0, 1000},
-    Increment = 10,
-    Suffix = "",
-    CurrentValue = 10,
-    Flag = "Jumppower", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-    Callback = function(JumpPower)
-        game.Players.LocalPlayer.Character.Humanoid.JumpPower = JumpPower
-    end,
- })
  local FEScripts = Window:CreateTab("FE Scripts", 4483362458) 
  local Paragraph1 = FEScripts:CreateParagraph({Title = "I don't own these scripts", Content = "Feel free to dm iPig#9689 on discord to take it down"})
  local Btools = FEScripts:CreateButton({
